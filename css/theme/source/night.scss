@@ -17,16 +17,16 @@
 
 
 // Override theme settings (see ../template/settings.scss)
-$backgroundColor: #111;
+$backgroundColor: #000;
 
 $mainFont: 'Open Sans', sans-serif;
-$linkColor: #e7ad52;
+$linkColor: #009fe3;
 $linkColorHover: lighten( $linkColor, 20% );
 $headingFont: 'Montserrat', Impact, sans-serif;
 $headingTextShadow: none;
-$headingLetterSpacing: -0.03em;
+$headingLetterSpacing: 0;
 $headingTextTransform: none;
-$selectionBackgroundColor: #e7ad52;
+$selectionBackgroundColor: #009fe3;
 
 
 // Theme template ------------------------------

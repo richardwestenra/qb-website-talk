@@ -1,13 +1,14 @@
 <!doctype html>
-<html>
+<html itemscope itemtype="http://schema.org/Article">
 	<head>
 		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-		<title>reveal.js</title>
+		<title>New QB Website demo</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+		<link rel="stylesheet" href="css/theme/night.css">
+		<link rel="stylesheet" href="css/theme/custom.css">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -22,10 +23,146 @@
 		</script>
 	</head>
 	<body>
+		<span class="twitter-handle">@richardwestenra</span>
+
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+<section>
+	<h1 class="title">A non-technical guide to the technical aspects of the new <img src="https://www.quantumblack.com/img/logo.svg" class="plain" alt=""> website</h1>
+	<aside class="notes">
+		<p>I'm proud of it, I think it's cool, and hopefully by the time I'm done with this talk, you will too.</p>
+	</aside>
+</section>
+<section data-background-video="img/QuantumBlack-Introduction.mp4" data-background-video-muted="true">
+	<aside class="notes">
+		<p>When you think about the QB brand, among other things, you think high-performance. That's why we commision these videos with all these fancy engine parts and floaty particles and things. Particles are high-performance, everyone knows that.</p>
+		<p>QB's mission is all about making lots of little optimisations here and there, which collectively build up to massive speed improvements. So that's what I tried to do with the new website. My main focus has been to make it as fast as possible, through lots of little performance optimisations.</p>
+	</aside>
+</section>
+<section>
+	<blockquote>&ldquo;In our new study,
+	<em>&lsquo;The Need for Mobile Speed&rsquo;</em>, we found that
+	<strong>53% of mobile site visits are abandoned</strong> if pages take longer than 3 seconds to load&rdquo;</blockquote>
+	<p>&mdash; DoubleClick</p>
+	<aside class="notes">
+		<p>Why is site speed so important?</p>
+		<p>DoubleClick ran a study on how site loading performance affected how people used websites.</p>
+		<p>They found that half of mobile users will abandon a site that takes more than 3 seconds to load.</p>
+	</aside>
+</section>
+<section>
+	<h3>People dislike using sites that are slow, janky, unresponsive, etc.</h3>
+	<aside class="notes">
+		<p>In other words, PEOPLE LEAVE YOUR SITE IF IT IS SLOW. Which, I’ll guess, is not what you want.</p>
+		<p>Site performance is important.</p>
+	</aside>
+</section>
+<section>
+	<h2 style="font-size:2.35em">A very brief history of websites</h2>
+	<aside class="notes">
+		<p>Before I explain how we made the site fast, a bit of background explanation for those of us who aren't web developers</p>
+	</aside>
+</section>
+<section data-background-image="http://riversidecrc.org/wp-content/uploads/the-beginning.jpg" data-background-size="cover">
+	<h2><br><br><br>Static HTML</h2>
+	<aside class="notes">
+		<p>In the beginning there was plain HTML web pages.</p>
+		<p>Tim Berners Lee. Every page had to be coded by hand. Duplicate code. Headers, footers. Making changes was difficult.</p>
+	</aside>
+</section>
+<section>
+	<img src="http://0.media.dorkly.cvcdn.com/23/45/4224105d93d09590a409bc562343551a.jpg" alt="">
+	<h3>Server-side templating</h3>
+	<aside class="notes">
+		<p>Reusable components, databases, automation</p>
+		<p>Downsides: Every page load was slow, both on first arrival and the next page.</p>
+		<p>If you visit a site where every single interaction needs to load a whole new page, it's doing everything on the server.</p>
+	</aside>
+</section>
+<section>
+	<img src="http://conormclaughlin.net/img/dynamic_vs_static.jpg" alt="">
+	<h3>Static site generators</h3>
+	<aside class="notes">
+		<p>If you don't need a database then why not do away with it?</p>
+		<p>Reasonably fast first load, but you still need to load every page from scratch</p>
+	</aside>
+</section>
+<section>
+	<img src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAQiAAAAJGJjM2QwMGU3LTQyNTUtNDljZi04M2JkLWJhNDEzZTU2Y2EyZg.png" alt="">
+	<h3>Fat clients</h3>
+	<aside class="notes">
+		<p>Download the entire app when you first arrive.</p>
+		<p>Example: Gmail</p>
+	</aside>
+</section>
+<section data-background-image="https://i.imgur.com/c7NJRa2.gif" data-background-size="contain">
+	<aside class="notes">
+		<p></p>
+	</aside>
+</section>
+<section>
+	<img src="https://react-etc.net/files/2017-10/gatsby-logo.png" alt="">
+	<aside class="notes">
+		<p>Built in React, generates HTML, then lazy-loads JS</p>
+	</aside>
+</section>
+<section>
+	<h2>Performance isn't optional, it's built-in</h2>
+	<aside class="notes">
+		<p>Most frameworks leave frontend performance to users to figure out. With Gatsby it’s fundamental.</p>
+		<p>Web performance is hard. There's a lot to remember and the goal-posts are always shifting.</p>
+		<p>Gatsby is a website compiler.</p>
+	</aside>
+</section>
+<section>
+	<h1>Plugins</h1>
+</section>
+</section>
+<section>
+	<h3>Works offline</h3>
+	<img src="img/wifi.jpg" alt="" width="50%">
+	<aside class="notes">
+		<p>Progressive Web App</p>
+	</aside>
+</section>
+<section data-background-video="img/traced-svg.mp4" data-background-video-loop="true">
+</section>
+<section data-background-image="img/careers.png"
+  data-background-size="cover">
+</section>
+<section data-background-image="img/workable.png" data-background-size="cover">
+</section>
+<section data-background-image="img/thinking.png" data-background-size="cover">
+</section>
+<section data-background-image="img/contentful1.png" data-background-size="cover">
+</section>
+<section data-background-image="img/contentful2.png" data-background-size="cover">
+</section>
+<section data-background-image="img/lighthouse.png" data-background-size="cover">
+</section>
+<section data-background-image="img/qb-old-lighthouse.png"
+	data-background-size="contain">
+	<h3 class="lighthouse-title">Old QB website</h3>
+</section>
+<section data-background-image="img/qb-new-lighthouse.png" data-background-size="contain">
+	<h3 class="lighthouse-title">New QB website</h3>
+	<aside class="notes">
+		<p>Lighthouse audit combined score from 257 out of 400 to 390.</p>
+		<p>Improved time to first meaningful paint by a factor of 8, from 7.4 seconds to 900ms</p>
+		<p>Time to interactive has been halved</p>
+	</aside>
+</section>
+<section data-background-iframe="https://staging.quantumblack.com/">
+	<aside class="notes">
+		<p></p>
+	</aside>
+</section>
+<section>
+	<h3>staging.quantumblack.com</h3>
+	<aside class="notes">
+		<p>Shipping Monday, hopefully</p>
+	</aside>
+</section>
 			</div>
 		</div>
 
@@ -37,6 +174,8 @@
 			// - https://github.com/hakimel/reveal.js#configuration
 			// - https://github.com/hakimel/reveal.js#dependencies
 			Reveal.initialize({
+				history: true,
+				showNotes: window.location.search.match(/showNotes/gi),
 				dependencies: [
 					{ src: 'plugin/markdown/marked.js' },
 					{ src: 'plugin/markdown/markdown.js' },

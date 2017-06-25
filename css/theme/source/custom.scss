@@ -1,0 +1,107 @@
+@import "../fontello/css/fontello.css";
+$backgroundColor: #000;
+
+$mainFont: 'Open Sans', sans-serif;
+$linkColor: #009fe3;
+$linkColorHover: lighten( $linkColor, 20% );
+$headingFont: 'Montserrat', Impact, sans-serif;
+$headingTextShadow: none;
+$headingLetterSpacing: 0;
+$headingTextTransform: none;
+$selectionBackgroundColor: #009fe3;
+
+.twitter-handle {
+  position: fixed;
+  bottom: 40px;
+  left: 40px;
+  font-size: 1.7em;
+  z-index: 100;
+  font-family: $mainFont;
+  color: #fff;
+  font-weight: 600;
+}
+
+
+.reveal {
+  section {
+    .title {
+      font-size: 1.5em;
+      line-height: 1.35;
+
+      img {
+        display: block;
+        margin: 0.8em 0;
+      }
+    }
+
+    blockquote {
+      width: 80%;
+      line-height: 1.5;
+      padding: 0.5em 1em;
+      margin-bottom: 1em;
+    }
+
+    .hashtag {
+      background: rgba(0,0,0,0.8);
+      padding: 0.1em 0.4em;
+      display: inline-block;
+
+      &:first-of-type {
+        margin-top: 7em;
+      }
+    }
+
+    .lighthouse-title {
+      background: rgba(0,0,0,0.8);
+      padding: 0.1em 0.4em;
+      display: inline-block;
+      margin-bottom: 5em;
+    }
+
+    h4.hashtag {
+      font-size: 1.4em;
+      margin: 0 0.2em;
+    }
+
+    img.plain {
+      background: none;
+    }
+
+    .grumpy {
+      margin: 2em -0.5em 0 0;
+      text-align: right;
+      text-shadow: 0 0 20px rgba(0,0,0,0.6);
+    }
+
+    .emoji {
+      font-size: 1.5em;
+      line-height: 1;
+
+      &--gap {
+        margin-top: 1.2em;
+      }
+    }
+
+    .list {
+      li {
+        margin: 0.6em 0;
+      }
+    }
+  }
+
+  .speaker-notes {
+    padding: 10px 30px;
+    max-height: 25%;
+    font-size: 20px;
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(10deg) translateY(0em);
+  }
+
+  to {
+    transform: rotate(10deg) translateY(-0.15em);
+  }
+}
